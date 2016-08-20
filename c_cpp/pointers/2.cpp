@@ -51,15 +51,19 @@ int main() {
 	cout << "The value of p + sizeof(2): " << p + sizeof(2) << endl;
 	cout << "The value of p + sizeof(0): " << p + sizeof(0) << endl;
 
-	// Lets do something more funny
-	int a1 = 0, b1 = 1, c1 = 2;
-	cout << "The address of a1 is: " << &a1 << endl;
-	cout << "The value of p + a1 is: " << p + a1 << endl;
-	cout << "The address of b1 is: " << &b1 << endl;
-	cout << "The value of p + b1 is: " << p + b1 << endl;
-	cout << "The address of c1 is: " << &c1 << endl;
-	cout << "The value of p + c1 is: " << p + c1 << endl;
+	// Okay now i finally got the answer on my stackoverflow post.
+	// sizeof(any integer value) = 4
+	// will always evaluates to 4 
+	// 4 is in bytes but
+	// it's always gonna be a numeric value
+	// that's why (p + sizeof(1)) = (p + sizeof(2)) = (p + sizeof(0))
+	// as that all we finally evaluate to p + 4.
+	// and when we do p + 1, p + 2 or p + 0
+	// here the integral part i.e. 1, 2, 0 gets multiplied by 4(sizeof integer in bytes)
+	// so p + 1 != p + 2 != p + 0
+
 	return 0;
 
-	// Not much clear! will update this in future
+	// Thanks to stackoverflow
+
 }
