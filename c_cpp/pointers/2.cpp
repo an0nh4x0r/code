@@ -42,5 +42,24 @@ int main() {
 	cout << "The value of p - 0 is: " << p - 0 << endl;
 	cout << "The value of p - 1 is: " << p - 1 << endl;
 	cout << "The value of p - 2 is: " << p - 2 << endl;
+
+	// After stackoverflow question
+	// http://stackoverflow.com/questions/39055671/pointers-sizeof-and-address-in-c
+	// trying new p + sizeof(1) and p + sizeof(2)
+
+	cout << "The value of p + sizeof(1): " << p + sizeof(1) << endl;
+	cout << "The value of p + sizeof(2): " << p + sizeof(2) << endl;
+	cout << "The value of p + sizeof(0): " << p + sizeof(0) << endl;
+
+	// Lets do something more funny
+	int a1 = 0, b1 = 1, c1 = 2;
+	cout << "The address of a1 is: " << &a1 << endl;
+	cout << "The value of p + a1 is: " << p + a1 << endl;
+	cout << "The address of b1 is: " << &b1 << endl;
+	cout << "The value of p + b1 is: " << p + b1 << endl;
+	cout << "The address of c1 is: " << &c1 << endl;
+	cout << "The value of p + c1 is: " << p + c1 << endl;
 	return 0;
+
+	// Not much clear! will update this in future
 }
